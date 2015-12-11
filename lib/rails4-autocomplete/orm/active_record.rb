@@ -33,7 +33,7 @@ module Rails4Autocomplete
 
       def get_autocomplete_select_clause(model, method, options)
         table_name = model.table_name
-        (["#{table_name}.#{model.primary_key}", "#{options[:table_name]}.#{method}"] + (options[:extra_data].blank? ? [] : options[:extra_data]))
+        (["#{table_name}.#{model.primary_key}", "#{options[:table_name]}.#{method}"])
       end
 
       def get_autocomplete_where_clause(model, term, method, options)
